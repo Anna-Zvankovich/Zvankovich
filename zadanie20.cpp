@@ -5,22 +5,22 @@ using namespace std;
 int main() 
 
 {
-	int k, i = 100;
+	int r, i = 100;
 	int a, copy;
 	int sum = 0, k = 0;
 	while (i < 1000)
 	{
-		k = 0;
+		r = 0;
 		copy = i;
-		while (k < 3)
+		while (r < 3)
 		{
 			a = copy % 10;
 			if (a % 2 == 0)
 				break;
 			copy /= 10;
-			k++;
+			r++;
 		}
-		if (k == 3)
+		if (r == 3)
 			sum += i;
 		i++;
 	}
