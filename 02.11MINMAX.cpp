@@ -3,7 +3,7 @@
 using namespace std;
 
 void EnterArray(int a[], int n);
-int MinMax(int a[], int n);
+void MinMax(int a[], int n, int& , int& );
 void RandomArray(int a[], int n);
 void DisplayArray(int a[], int n);
 
@@ -26,9 +26,11 @@ int main()
 	cout << "Source array" << endl;
 	DisplayArray(a, n);
 	cout << endl;
-
-	int i = MinMax(a, n), j = MinMax(a, n);
-	cout << "min = " << a[i] << "  max = " << a[j] << endl;
+	//EnterArray(a, n);
+	int min=0, max=0;
+	MinMax(a, n,min , max );
+	cout << "min index = " << min << endl;
+	cout << "max index = " << max << endl;
 	system("pause");
 	return 0;
 }
@@ -44,8 +46,6 @@ void EnterArray(int a[], int n)
 	}
 }
 
-
-
 void DisplayArray(int a[], int n)
 {
 	for (int i = 0; i < n; i++)
@@ -55,28 +55,18 @@ void DisplayArray(int a[], int n)
 }
 
 
-int MinMax(int a[], int n)
-
-
+void MinMax(int a[], int n, int& min, int& max)
 {
-	int min = 0, i = 1;
-	if (a[min] > a[i])
+	for (int i = 0; i < n; i++)
 	{
-
-		for (int i = 1; i < n; i++)
+		if (a[i] < a[min])
 			min = i;
-		return min;
-	}
-	int max = 0;
-	if (a[max] < a[i])
-	{
-		for (int i = 1; i < n; i++)
+		if (a[i] > a[max])
 			max = i;
-		return max;
+
 	}
+
 }
-
-
 void RandomArray(int a[], int n)
 {
 	for (int i = 0; i < n; i++)
