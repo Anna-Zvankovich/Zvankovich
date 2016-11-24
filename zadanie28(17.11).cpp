@@ -30,9 +30,9 @@ int main()
 }
 void BubbleSort(int a[], int n)
 {
-	for (int i = n; i >= n; i--)
+	for (int i = 1; i <= n; i++)
 	{
-		for (int j = n - 1; j <= i; j++)
+		for (int j = n - 1; j >= i; j--)
 		{
 			if (a[j] > a[j - 1])
 			{
