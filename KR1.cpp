@@ -19,7 +19,7 @@ int main()
 		b[28] = '+';
 		b[29] = ' ';
 	}
-	Switch(b, a, str);
+	if (Switch(b, a, str));
 	cout << str << endl;
 	system("pause");
 	return 0;
@@ -33,7 +33,7 @@ bool Switch(char b[], char a[N], char str[])
 		if (a[i] < 0 && a[i]>29)
 		{
 			cout << "Input Error" << endl;
-			return false;
+		 return false;
 		}
 		str[i] = b[a[i]];
 	}
