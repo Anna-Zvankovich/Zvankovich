@@ -30,7 +30,8 @@ bool Switch(char b[], char a[N], char str[])
 	int N = LengthString(a);
 	for (int i = 0; i < N; i++)
 	{
-		if (a[i] < 0 && a[i]>29)
+
+		if (a[i] < 0 || a[i]>29)
 		{
 			cout << "Input Error" << endl;
 		 return false;
